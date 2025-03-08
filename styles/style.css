@@ -10,12 +10,17 @@
 
 *{
     margin: 0;
-    height: 0;
+    padding: 0;
+    
 }
 body{
     position: relative;
     height: 100vh;
+    font-family: 'Inconsolata','Arial';
+    color: white;
 }
+
+/* background del formulario */
 
 .background{
     position: absolute;
@@ -49,7 +54,7 @@ body{
 
 .background .logo-full{
     position: absolute;
-    top:52px;
+    top:60px;
     left:50%;
     transform: translate(-50%,-50%);
     width: 209px;
@@ -86,4 +91,192 @@ body{
     left:66px;
     width: 217px;
     height: auto;
+}
+
+/*   fin background del formulario*/
+
+/* Formulario*/
+
+.formulario{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 1440px;
+    height: 1100px;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size:57px;
+    color: var(--Neutral0);
+    width: 798px;
+    text-align: center;
+    padding-top: 130px;
+    font-weight: 700;
+}
+
+.subtitle{
+    font-size: 22px;
+    color: var(--Neutral500);
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.box-upload{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 51px;
+    gap: 15px;
+}
+
+.upload-title{
+    font-size: 20px;
+    color: var(--Neutral0);
+    font-weight: 400;
+}
+
+.file-upload-box{
+    width: 446px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Neutral700);
+    opacity: 0.6;
+    border-radius: 10px;
+    border: 2px dashed var(--Neutral300);
+    cursor: pointer;
+}   
+
+.upload-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Neutral500);
+    border-radius: 10px;
+    border: 1px solid var(--Neutral0);
+}
+#file-upload{
+    display: none;
+}
+
+.text-upload{
+    margin-top: 12px;
+}
+
+.info{
+    display: flex;
+    gap: 8px;
+    color: var(--Neutral500);
+    align-items: center;
+}
+
+.text-info{
+    font-size: 11px;
+
+}
+
+.box-full-name{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 28px;
+    gap: 18px;
+}
+
+#name{
+    width: 446px;
+    height: 50px;
+    background-color: var(--Neutral700);
+    border: 2px solid var(--Neutral0);
+    border-radius: 10px;
+    opacity: 0.3;
+    color: var(--Neutral0);
+    font-size: 20px;
+    text-indent: 15px;
+}
+
+.text-name{
+    font-size: 20px;
+}
+
+.box-email{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 28px;
+    gap: 18px;
+}
+
+#email{
+    width: 446px;
+    height: 50px;
+    background-color: var(--Neutral700);
+    border: 2px solid var(--Neutral0);
+    border-radius: 10px;
+    opacity: 0.3;
+    color: var(--Neutral0);
+    font-size: 20px;
+    text-indent: 15px;
+}
+
+#email::placeholder{
+    color: var(--Neutral0);
+    font-size: 16px;
+    
+}
+.text-email{
+    font-size: 20px;
+}
+
+
+
+.box-github{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 28px;
+    gap: 18px;
+}
+
+#github{
+    width: 446px;
+    height: 50px;
+    background-color: var(--Neutral700);
+    border: 2px solid var(--Neutral0);
+    border-radius: 10px;
+    opacity: 0.3;
+    color: var(--Neutral0);
+    font-size: 20px;
+    text-indent: 15px;
+}
+
+#github::placeholder{
+    color: var(--Neutral0);
+    font-size: 16px;
+    
+}
+
+.text-github{
+    font-size: 20px;
+}
+
+.button-ticket{
+    border: none;
+    margin-top: 31px;
+    background-color: var(--Orange700);
+    width: 446px;
+    height: 60px;
+    color: var(--Neutral900);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 15px;
 }
