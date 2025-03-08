@@ -16,7 +16,7 @@
 body{
     position: relative;
     height: 100vh;
-    font-family: 'Inconsolata','Arial';
+    font-family: 'Inconsolata';
     color: white;
 }
 
@@ -124,6 +124,7 @@ body{
     color: var(--Neutral500);
     margin-top: 20px;
     font-weight: 400;
+    text-align: center;
 }
 
 .box-upload{
@@ -200,8 +201,9 @@ body{
     border-radius: 10px;
     opacity: 0.3;
     color: var(--Neutral0);
-    font-size: 20px;
+    font-size: 16px;
     text-indent: 15px;
+    font-family: 'inconsolata';
 }
 
 .text-name{
@@ -224,8 +226,9 @@ body{
     border-radius: 10px;
     opacity: 0.3;
     color: var(--Neutral0);
-    font-size: 20px;
+    font-size: 16px;
     text-indent: 15px;
+    font-family: 'inconsolata';
 }
 
 #email::placeholder{
@@ -255,14 +258,15 @@ body{
     border-radius: 10px;
     opacity: 0.3;
     color: var(--Neutral0);
-    font-size: 20px;
+    font-size: 16px;
     text-indent: 15px;
+    font-family: 'inconsolata';
 }
 
 #github::placeholder{
     color: var(--Neutral0);
     font-size: 16px;
-    
+    font-family: 'inconsolata';
 }
 
 .text-github{
