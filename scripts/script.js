@@ -1,6 +1,8 @@
 const dropArea=document.getElementById('dropArea');
 const previewContainer=document.getElementById('previewContainer');
 const fileInput=document.getElementById('fileUpload');
+const textUpload=document.querySelector('.text-upload');
+const buttons=document.querySelector('.botonesRemoveChangeIcon');
 
 previewContainer.addEventListener('click',(event)=>{
     fileInput.click();
@@ -31,4 +33,8 @@ dropArea.addEventListener('drop',(event)=>{
     const file=event.dataTransfer.files[0];
     const imgeURL=URL.createObjectURL(file);
     previewContainer.src=imgeURL; 
+
+    textUpload.style.display='none';
+    buttons.style.display='flex';
+
 });
