@@ -209,6 +209,7 @@ body{
     color: var(--Neutral0);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .changeIcon{
@@ -218,6 +219,7 @@ body{
     color: var(--Neutral0);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .info{

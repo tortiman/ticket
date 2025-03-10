@@ -37,4 +37,13 @@ dropArea.addEventListener('drop',(event)=>{
     textUpload.style.display='none';
     buttons.style.display='flex';
 
+    const removeButton=document.querySelector('.removeIcon');
+    const changeButton=document.querySelector('.changeIcon');
+
+    removeButton.addEventListener('click',(e)=>{
+        previewContainer.src='/assets/images/icon-upload.svg';
+    });
+    changeButton.addEventListener('click',(e)=>{
+        fileInput.click();
+    });
 });
