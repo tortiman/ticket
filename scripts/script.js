@@ -1,6 +1,16 @@
 const dropArea=document.getElementById('dropArea');
 const previewContainer=document.getElementById('previewContainer');
-// const preview=document.getElementById('preview');
+const fileInput=document.getElementById('fileUpload');
+
+previewContainer.addEventListener('click',(event)=>{
+    fileInput.click();
+});
+
+fileInput.addEventListener('change',(event)=>{
+    const file=event.target.files[0];
+    const imageURL=URL.createObjectURL(file);
+    previewContainer.src=imageURL;
+});
 
 dropArea.addEventListener('dragover',(event)=>{
     event.preventDefault();
