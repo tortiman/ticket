@@ -334,4 +334,5 @@ body{
     font-weight: 700;
     font-size: 16px;
     border-radius: 15px;
+    cursor: pointer;
 }
