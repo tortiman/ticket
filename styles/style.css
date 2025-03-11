@@ -121,7 +121,7 @@ body{
 
 .subtitle{
     font-size: 22px;
-    color: var(--Neutral500);
+    color: var(--Neutral300);
     margin-top: 20px;
     font-weight: 400;
     text-align: center;
@@ -156,7 +156,11 @@ body{
     border-radius: 10px;
     border: 2px dashed var(--Neutral300);
     cursor: pointer;
-}   
+}
+
+#dropArea:focus{
+    outline: thick double white;
+}
 
 .upload-image{
     /* display: flex;
@@ -257,6 +261,10 @@ body{
     font-family: 'inconsolata';
 }
 
+#name:focus{
+    outline-offset: 2px;   
+}
+
 .text-name{
     font-size: 20px;
 }
@@ -280,6 +288,10 @@ body{
     font-size: 16px;
     text-indent: 15px;
     font-family: 'inconsolata';
+}
+
+#email:focus{
+    outline-offset: 2px;
 }
 
 #email::placeholder{
@@ -314,6 +326,11 @@ body{
     font-family: 'inconsolata';
 }
 
+#github:focus{
+    outline-offset: 2px;
+    
+}
+
 #github::placeholder{
     color: var(--Neutral0);
     font-size: 16px;
@@ -335,6 +352,11 @@ body{
     font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.button-ticket:focus{
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
+    outline-offset: none;
 }
 
 
