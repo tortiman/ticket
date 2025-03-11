@@ -336,3 +336,142 @@ body{
     border-radius: 15px;
     cursor: pointer;
 }
+
+
+/* fin formulario */
+
+/* ticket */
+
+.ticket{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 1440px;
+    height: 1100px;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-title{
+    font-size:57px;
+    color: var(--Neutral0);
+    width: 798px;
+    text-align: center;
+    padding-top: 130px;
+    font-weight: 700;
+}
+
+.result-subtitle{
+    display: block;
+    width: 430px;
+    font-size: 22px;
+    color: var(--Neutral500);
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.data-ticket{
+    width: 600px;
+    height: 280px;
+    position: relative;
+    top: 144px;
+}
+
+.imgTicket{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.imgLogoTicket{
+    position: absolute;
+    left: 25px;
+    top: 30px;
+}
+
+.ticketTitle{
+    position: absolute;
+    left: 85px;
+    top: 25px;
+    font-size: 32px;
+    font-family: 'inconsolata';
+    font-weight: 600;
+
+}
+
+.ticketDateLocation{
+    position: absolute;
+    left: 85px;
+    top: 70px;
+    color: var(--Neutral500);
+    font-weight: 600;
+}
+
+.flex-user{
+    position: absolute;
+    top: 175px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-name-github{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 8px;
+}
+
+.flex-github{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    gap: 6px;
+}
+
+.ticketAvatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+}   
+
+.ticketName{
+    font-size: 24px;
+    color: var(--Neutral300);
+    font-weight: 600;
+
+}
+
+.ticketUserGithub{
+    color: var(--Neutral500);
+    font-weight: 600;
+}
+
+.nameTicket{
+    background: linear-gradient(to right,hsl(7, 86%, 67%), hsl(0, 0%, 100%)); /* Gradiente lineal */
+    -webkit-background-clip: text; /* Clipping del fondo */
+    -webkit-text-fill-color: transparent; /* Color del texto transparente */
+}
+
+.ticketNumber{
+    position: absolute;
+    font-size: 26px;
+    color: var(--Neutral500);
+    top: 125px;
+    left: 510px;
+    
+    transform: rotate(90deg);
+}
+
+.emailTicket{
+    color: var(--Orange500);
+}
