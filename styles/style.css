@@ -458,7 +458,7 @@ body{
 
 .nameTicket{
     background: linear-gradient(to right,hsl(7, 86%, 67%), hsl(0, 0%, 100%)); /* Gradiente lineal */
-    -webkit-background-clip: text; /* Clipping del fondo */
+    background-clip: text; /* Clipping del fondo */
     -webkit-text-fill-color: transparent; /* Color del texto transparente */
 }
 
