@@ -3,6 +3,8 @@ const previewContainer=document.getElementById('previewContainer');
 const fileInput=document.getElementById('fileUpload');
 const textUpload=document.querySelector('.text-upload');
 const buttons=document.querySelector('.botonesRemoveChangeIcon');
+const buttonTicket=document.querySelector('.button-ticket');
+
 
 previewContainer.addEventListener('click',(event)=>{
     fileInput.click();
@@ -46,4 +48,16 @@ dropArea.addEventListener('drop',(event)=>{
     changeButton.addEventListener('click',(e)=>{
         fileInput.click();
     });
+});
+
+buttonTicket.addEventListener('click',()=>{
+    // ********logica de errores
+    // Comprobacion imagen distinta al icono upload
+    console.log(previewContainer.src);
+    if (previewContainer.src !== 'http://127.0.0.1:3000/assets/images/icon-upload.svg'){
+        console.log('imagen distinta al icono de subida');
+    }else{
+        console.log('imagen igual al icono de subida');
+    }
+   
 });
