@@ -147,10 +147,6 @@ body{
     width: 446px;
     height: 118px;
     position: relative;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
     background-color: var(--Neutral700);
     opacity: 0.6;
     border-radius: 10px;
@@ -163,9 +159,6 @@ body{
 }
 
 .upload-image{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     position: absolute;
     top: 40px;
     left: 223px;
@@ -229,16 +222,14 @@ body{
 .info{
     display: flex;
     gap: 8px;
-    color: var(--Neutral500);
     align-items: center;
-}
-
-.text-info{
     font-size: 11px;
-
+    color: var(--Neutral500);
 }
+
 
 .text-info-errors{
+    font-size: 11px;
     color:var(--Orange700);
 }
 
@@ -247,6 +238,35 @@ body{
 }
 
 /* ----------------------Fin caja upload-----------------------------------------*/
+
+.error-full-name{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 11px;
+    color: var(--Orange700);
+}
+
+.error-full-name-correct{
+    display: none;
+}
+
+.error-email{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 11px;
+    color: var(--Orange700);
+}
+
+.error-github{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 11px;
+    color: var(--Orange700);
+}
+
 
 .box-full-name{
     display: flex;
