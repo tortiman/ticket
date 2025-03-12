@@ -238,6 +238,14 @@ body{
 
 }
 
+.text-info-errors{
+    color:var(--Orange700);
+}
+
+.image-info-error{
+    fill: var(--Orange700);
+}
+
 /* ----------------------Fin caja upload-----------------------------------------*/
 
 .box-full-name{
