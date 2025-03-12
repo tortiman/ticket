@@ -259,6 +259,10 @@ body{
     color: var(--Orange700);
 }
 
+.error-email-correct{
+    display: none;
+}
+
 .error-github{
     display: flex;
     gap: 8px;
@@ -267,6 +271,9 @@ body{
     color: var(--Orange700);
 }
 
+.error-github-correct{
+    display: none;
+}
 
 .box-full-name{
     display: flex;

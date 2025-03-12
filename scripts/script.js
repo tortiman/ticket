@@ -91,6 +91,39 @@ fullName.addEventListener('focusout',()=>{
     }
 });
 
+email.addEventListener('focusout',()=>{
+    if(checkTextBox(email)){
+        document.querySelector('.error-email').classList.add('error-email-correct');
+        if(checkFormatEmail()){
+
+        }else{
+            document.querySelector('.error-email').classList.remove('error-email-correct');
+            document.querySelector('.text-info-email').innerHTML='Please enter a valid email address.';
+            document.getElementById('email').value='';    
+        };
+    }else{
+        document.querySelector('.error-email').classList.remove('error-email-correct');
+    };
+
+    
+});
+
+github.addEventListener('focusout',()=>{
+    if(checkTextBox(github)){
+        document.querySelector('.error-github').classList.add('error-github-correct');
+        if(checkFormatGithub()){
+
+        }else{
+            document.querySelector('.error-github').classList.remove('error-github-correct');
+            document.querySelector('.text-info-github').innerHTML='Please enter a valid user github.';
+            document.getElementById('github').value='';    
+        };
+    }else{
+        document.querySelector('.error-github').classList.remove('error-github-correct');
+    }
+});
+
+
 buttonTicket.addEventListener('click',()=>{
     // ********logica de errores
     // Comprobacion imagen distinta al icono upload
@@ -104,13 +137,9 @@ buttonTicket.addEventListener('click',()=>{
     
     // Comprobamos que las cajas de texto estan completas
     
-    if(checkTextBox(fullName)){
-        document.querySelector('.error-full-name').display='none';
-    };
-        
+    
        
-    checkTextBox(email);
-    checkTextBox(github);  
+    
 });
 
 
@@ -132,4 +161,14 @@ function checkTextBox(textBox){
     }else{
         return true;
     }
+}
+
+function checkFormatEmail(){
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email.value);
+}
+
+function checkFormatGithub(){
+    const regex=/@.+/;
+    return regex.test(github.value);
 }
