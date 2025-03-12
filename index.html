@@ -128,14 +128,14 @@
 
     <!-- Estructura ticket -->
 
-    <div class="ticket" style="display: none">
+    <div class="ticket">
       <p class="result-title">
-        Congrats, <span class="nameTicket">Jonatan Kristof!</span> Your ticket
+        Congrats, <span class="nameTicket" id="ticketName"></span> Your ticket
         is ready.
       </p>
       <p class="result-subtitle">
         We've emailed your ticket to
-        <span class="emailTicket">jonatan@email.com</span> and will send updates
+        <span class="emailTicket" id="ticketEmail"></span> and will send updates
         in the run up to the event.
       </p>
       <div class="data-ticket">
@@ -144,20 +144,16 @@
         <p class="ticketTitle">Coding Conf</p>
         <p class="ticketDateLocation">Jan 31, 2025 / Austin, TX</p>
         <div class="flex-user">
-          <img
-            src="/assets/images/image-avatar.jpg"
-            alt=""
-            class="ticketAvatar"
-          />
+          <img src="" alt="" class="ticketAvatar" id="ticketAvatar" />
           <div class="flex-name-github">
-            <p class="ticketName">Jonatan Kristof</p>
+            <p class="ticketName" id="ticketName1"></p>
             <div class="flex-github">
               <img
                 src="/assets/images/icon-github.svg"
                 alt=""
                 class="ticketIconGithub"
               />
-              <p class="ticketUserGithub">@Jonatankristof0101</p>
+              <p class="ticketUserGithub" id="ticketUserGithub"></p>
             </div>
           </div>
         </div>

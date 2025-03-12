@@ -8,6 +8,14 @@ const fullName=document.getElementById('name');
 const email=document.getElementById('email');
 const github=document.getElementById('github');
 
+/** VARIABLES QUE SE USAN EN EL TICKET */
+let image='';
+const ticketName=document.getElementById('ticketName');
+const ticketName1=document.getElementById('ticketName1');
+const ticketEmail=document.getElementById('ticketEmail');
+const ticketAvatar=document.getElementById('ticketAvatar');
+const ticketUserGithub=document.getElementById('ticketUserGithub');
+
 previewContainer.addEventListener('click',(event)=>{
     fileInput.click();
 });
@@ -16,6 +24,7 @@ fileInput.addEventListener('change',(event)=>{
     const file=event.target.files[0];
     if(checkSizeFile(file)){
         const imageURL=URL.createObjectURL(file);
+        image=imageURL;
         previewContainer.src=imageURL;
         document.querySelector('.text-info').innerHTML='Upload your photo (JPG or PNG, max size: 500KB).';
         document.querySelector('.text-info').classList.remove('text-info-errors');
@@ -58,6 +67,7 @@ dropArea.addEventListener('drop',(event)=>{
     const file=event.dataTransfer.files[0];
     if(checkSizeFile(file)){
         const imgeURL=URL.createObjectURL(file);
+        image=imageURL;
         previewContainer.src=imgeURL; 
         document.querySelector('.text-info').innerHTML='Upload your photo (JPG or PNG, max size: 500KB).';
         document.querySelector('.text-info').classList.remove('text-info-errors');
@@ -128,8 +138,18 @@ buttonTicket.addEventListener('click',()=>{
     // ********logica de errores
     // Comprobacion imagen distinta al icono upload
     // se cambia el texto de text-info y se pone en rojo sino se ha cargado una imagen
-    if (previewContainer.src !== 'http://127.0.0.1:3000/assets/images/icon-upload.svg'){
-        
+    if ((previewContainer.src !== 'http://127.0.0.1:3000/assets/images/icon-upload.svg') && checkTextBox(fullName) && checkTextBox(email) && checkTextBox(github) ){
+        document.querySelector('.formulario').classList.add('formulario-hidden');
+        document.querySelector('.ticket').classList.add('ticket-show');
+
+        // ponemos los datos introducidos en el formulario en el resultado
+
+        ticketName.innerText=fullName.value+'!';
+        ticketName1.innerText=fullName.value;
+        ticketEmail.innerText=email.value;
+        ticketAvatar.src=image;
+        ticketUserGithub.innerText=github.value;
+
     }else{
         document.querySelector('.text-info').innerHTML='No se ha cargado la imagen'; 
         document.querySelector('.text-info').classList.add('text-info-errors');
