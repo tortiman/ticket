@@ -1,17 +1,19 @@
 :root{
     --Neutral0: hsl(0, 0%, 100%);
     --Neutral300: hsl(252, 6%, 83%);
-    --Neutral500: hsl(245, 15%, 58%);
+    --Neutral500: 245deg, 15%, 58%;
     --Neutral700: hsl(245, 19%, 35%);
     --Neutral900: hsl(248, 70%, 10%);
     --Orange500: hsl(7, 88%, 67%);
     --Orange700: hsl(7, 71%, 60%);
-}
+    --fondoBox: var(--Neutral500), 0.2;
+    --fondoBox1: var(--Neutral500), 0.4;
+}   
 
 *{
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 body{
     position: relative;
@@ -138,7 +140,7 @@ body{
     flex-direction: column;
     align-items: start;
     margin-top: 51px;
-    gap: 15px;
+    gap: 10px;
 }
 
 .upload-title{
@@ -149,10 +151,9 @@ body{
 
 .file-upload-box{
     width: 446px;
-    height: 118px;
+    height: 100px;
     position: relative;
-    background-color: var(--Neutral700);
-    opacity: 0.6;
+    background: hsla(var(--fondoBox));
     border-radius: 10px;
     border: 2px dashed var(--Neutral300);
     cursor: pointer;
@@ -164,21 +165,24 @@ body{
 
 .upload-image{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 40px;
     left: 223px;
     transform: translate(-50%,-50%);
-    width: 50px;
-    height: 50px;
-    background-color: var(--Neutral500);
+    width: 40px;
+    height: 40px;
+    background: hsla(var(--fondoBox1));
     border-radius: 10px;
-    border: 1px solid var(--Neutral0);
+    border: 1px solid var(--Neutral300);
 }
 
 #previewContainer{
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    border: 1px solid var(--Neutral0);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
 }
  #fileUpload{
     display: none;
@@ -186,13 +190,13 @@ body{
 
 .text-upload{
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 100px;
 }
 
 .botonesRemoveChangeIcon{
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 115px;
     width: 220px;
     display: flex;
@@ -289,11 +293,11 @@ body{
 
 #name{
     width: 446px;
-    height: 50px;
-    background-color: var(--Neutral700);
-    border: 2px solid var(--Neutral0);
+    height: 45px;
+    background: hsla(var(--fondoBox));
+    border: 1px solid var(--Neutral300);
     border-radius: 10px;
-    opacity: 0.3;
+    /* opacity: 0.3; */
     color: var(--Neutral0);
     font-size: 16px;
     text-indent: 15px;
@@ -319,10 +323,10 @@ body{
 #email{
     width: 446px;
     height: 50px;
-    background-color: var(--Neutral700);
-    border: 2px solid var(--Neutral0);
+    background: hsla(var(--fondoBox));
+    border: 1px solid var(--Neutral300);
     border-radius: 10px;
-    opacity: 0.3;
+    /* opacity: 0.3; */
     color: var(--Neutral0);
     font-size: 16px;
     text-indent: 15px;
@@ -334,9 +338,9 @@ body{
 }
 
 #email::placeholder{
-    color: var(--Neutral0);
+    color: var(--Neutral500);
     font-size: 16px;
-    
+    font-weight: 200;
 }
 .text-email{
     font-size: 20px;
@@ -355,10 +359,9 @@ body{
 #github{
     width: 446px;
     height: 50px;
-    background-color: var(--Neutral700);
-    border: 2px solid var(--Neutral0);
+    background: hsla(var(--fondoBox));
+    border: 1px solid var(--Neutral300);
     border-radius: 10px;
-    opacity: 0.3;
     color: var(--Neutral0);
     font-size: 16px;
     text-indent: 15px;
@@ -371,8 +374,9 @@ body{
 }
 
 #github::placeholder{
-    color: var(--Neutral0);
+    color: var(--Neutral500);
     font-size: 16px;
+    font-weight: 200;
     font-family: 'inconsolata';
 }
 
