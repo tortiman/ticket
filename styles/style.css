@@ -7,7 +7,7 @@
     --Orange500: hsl(7, 88%, 67%);
     --Orange700: hsl(7, 71%, 60%);
     --fondoBox: var(--Neutral500), 0.2;
-    --fondoBox1: var(--Neutral500), 0.4;
+    --fondoBox1: var(--Neutral500), 0.2;
 }   
 
 *{
@@ -151,7 +151,7 @@ body{
 
 .file-upload-box{
     width: 446px;
-    height: 100px;
+    height: 110px;
     position: relative;
     background: hsla(var(--fondoBox));
     border-radius: 10px;
@@ -159,8 +159,9 @@ body{
     cursor: pointer;
 }
 
-#dropArea:focus{
-    outline: thick double white;
+.file-upload-box:hover{
+    outline: 3px solid var(--Neutral300);
+    outline-offset: 2px;
 }
 
 .upload-image{
@@ -175,7 +176,7 @@ body{
     height: 40px;
     background: hsla(var(--fondoBox1));
     border-radius: 10px;
-    border: 1px solid var(--Neutral300);
+    border: 1px solid var(--Neutral700);
 }
 
 #previewContainer{
@@ -192,6 +193,7 @@ body{
     position: absolute;
     top: 70px;
     left: 100px;
+    color: var(--Neutral500);
 }
 
 .botonesRemoveChangeIcon{
@@ -204,14 +206,15 @@ body{
     flex-direction: row;
     justify-content: center;
     gap:10px;
+    color: var(--Neutral700);
     
 }
 
 .removeIcon{
     font-size: 11px;
-    background-color: var(--Neutral500);
+    background: hsla(var(--fondoBox1));
     padding: 5px 8px;
-    color: var(--Neutral0);
+    color: var(--Neutral300);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -219,9 +222,9 @@ body{
 
 .changeIcon{
     font-size: 11px;
-    background-color: var(--Neutral500);
+    background: hsla(var(--fondoBox1));
     padding: 5px 8px;
-    color: var(--Neutral0);
+    color: var(--Neutral300);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -297,15 +300,15 @@ body{
     background: hsla(var(--fondoBox));
     border: 1px solid var(--Neutral300);
     border-radius: 10px;
-    /* opacity: 0.3; */
     color: var(--Neutral0);
     font-size: 16px;
     text-indent: 15px;
     font-family: 'inconsolata';
+   
 }
 
 #name:focus{
-    outline-offset: 2px;   
+    outline-offset: 3px;   
 }
 
 .text-name{
@@ -326,15 +329,14 @@ body{
     background: hsla(var(--fondoBox));
     border: 1px solid var(--Neutral300);
     border-radius: 10px;
-    /* opacity: 0.3; */
-    color: var(--Neutral0);
+    color: var(--Neutral500);
     font-size: 16px;
     text-indent: 15px;
     font-family: 'inconsolata';
 }
 
 #email:focus{
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 #email::placeholder{
@@ -362,14 +364,14 @@ body{
     background: hsla(var(--fondoBox));
     border: 1px solid var(--Neutral300);
     border-radius: 10px;
-    color: var(--Neutral0);
+    color: var(--Neutral500);
     font-size: 16px;
     text-indent: 15px;
     font-family: 'inconsolata';
 }
 
 #github:focus{
-    outline-offset: 2px;
+    outline-offset: 3px;
     
 }
 
@@ -385,7 +387,6 @@ body{
 }
 
 .button-ticket{
-    border: none;
     margin-top: 31px;
     background-color: var(--Orange700);
     width: 446px;
@@ -395,11 +396,12 @@ body{
     font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
+    border: none;
 }
 
 .button-ticket:focus{
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 1);
-    outline-offset: none;
+    outline: 2px solid var(--Neutral300);
+    outline-offset: 3px;
 }
 
 
