@@ -9,12 +9,13 @@ const email=document.getElementById('email');
 const github=document.getElementById('github');
 
 /** VARIABLES QUE SE USAN EN EL TICKET */
-let image='';
 const ticketName=document.getElementById('ticketName');
 const ticketName1=document.getElementById('ticketName1');
 const ticketEmail=document.getElementById('ticketEmail');
 const ticketAvatar=document.getElementById('ticketAvatar');
 const ticketUserGithub=document.getElementById('ticketUserGithub');
+
+let image=''
 
 previewContainer.addEventListener('click',(event)=>{
     fileInput.click();
@@ -24,8 +25,8 @@ fileInput.addEventListener('change',(event)=>{
     const file=event.target.files[0];
     if(checkSizeFile(file)){
         const imageURL=URL.createObjectURL(file);
-        image=imageURL;
         previewContainer.src=imageURL;
+        image=imageURL;
         document.querySelector('.text-info').innerHTML='Upload your photo (JPG or PNG, max size: 500KB).';
         document.querySelector('.text-info').classList.remove('text-info-errors');
         document.querySelector('.image-info').classList.remove('image-info-error');  
@@ -63,12 +64,12 @@ dropArea.addEventListener('drop',(event)=>{
     event.preventDefault();
     dropArea.style.backgroundColor = 'transparent';
     previewContainer.style.backgroundColor='transparent';
-
     const file=event.dataTransfer.files[0];
+    
     if(checkSizeFile(file)){
-        const imgeURL=URL.createObjectURL(file);
+        const imageURL=URL.createObjectURL(file);
+        previewContainer.src=imageURL;
         image=imageURL;
-        previewContainer.src=imgeURL; 
         document.querySelector('.text-info').innerHTML='Upload your photo (JPG or PNG, max size: 500KB).';
         document.querySelector('.text-info').classList.remove('text-info-errors');
         document.querySelector('.image-info').classList.remove('image-info-error'); 

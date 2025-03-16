@@ -20,6 +20,8 @@ body{
     height: 100vh;
     font-family: 'Inconsolata';
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 /* background del formulario */
@@ -104,8 +106,8 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    width: 1440px;
-    height: 1100px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: top;
     align-items: center;
@@ -117,18 +119,18 @@ body{
 }
 
 .title{
-    font-size:57px;
+    font-size:3.53rem;
     color: var(--Neutral0);
-    width: 798px;
+    width: 55%;
     text-align: center;
-    padding-top: 130px;
+    padding-top: 8.5rem;
     font-weight: 700;
 }
 
 .subtitle{
-    font-size: 22px;
+    font-size: 1.4rem;
     color: var(--Neutral300);
-    margin-top: 20px;
+    margin-top: 1.3rem;
     font-weight: 400;
     text-align: center;
 }
@@ -139,8 +141,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-top: 51px;
-    gap: 10px;
+    margin-top: 3rem;
+    gap: 0.7rem;
 }
 
 .upload-title{
@@ -150,8 +152,8 @@ body{
 }
 
 .file-upload-box{
-    width: 446px;
-    height: 110px;
+    width: 100%;
+    height: 6.9rem;
     position: relative;
     background: hsla(var(--fondoBox));
     border-radius: 10px;
